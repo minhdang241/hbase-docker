@@ -282,3 +282,16 @@ b1070470a710        datanode:0.6        "/bin/bootstrap.sh"      10 days ago    
 8e08ce2daecf        datanode:0.6        "/bin/bootstrap.sh"      10 days ago         Up 5 days                               dreamy_lamarr
 .....
 ```
+
+## HOW TO RUN ON SERVER
+` source run.sh`
+
+## Checking
+Step1:
+`docker exec -it hbase_master /bin/bash`
+
+Step2:
+`jps`
+You should see ThriftServer
+
+

@@ -21,28 +21,23 @@
  */
 -->
 <configuration>
+  <property>
+    <name>hbase.cluster.distributed</name>
+    <value>true</value>
+  </property>
 
+  <property>
+    <name>hbase.rootdir</name>
+    <value>hdfs://namenode:9000/hbase</value>
+  </property>
 
-<property>
-  <name>hbase.cluster.distributed</name>
-  <value>true</value>
-</property>
+  <property>
+    <name>hbase.zookeeper.quorum</name>
+    <value>hbase_regionserver2,hbase_regionserver_backup,hbase_master</value>
+  </property>
 
-<property>
-  <name>hbase.rootdir</name>
-  <value>hdfs://namenode:9000/hbase</value>
-</property>
-
-<property>
-  <name>hbase.zookeeper.quorum</name>
-  <value>hbase_regionserver2,hbase_regionserver_backup,hbase_master</value>
-</property>
-
-<property>
-  <name>hbase.zookeeper.property.dataDir</name>
-  <value>hdfs://namenode:9000/zookeeper</value>
-</property>
-
-
-
+  <property>
+    <name>hbase.zookeeper.property.dataDir</name>
+    <value>hdfs://namenode:9000/zookeeper</value>
+  </property>
 </configuration>

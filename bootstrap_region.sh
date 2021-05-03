@@ -4,5 +4,4 @@
 
 service ssh start
 
-/bin/bash
-
+tail -f /dev/null

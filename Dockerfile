@@ -12,15 +12,12 @@ RUN apt -y install  openjdk-8-jdk \
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/
 
 
-
-
-
-#Copy hadoop
-COPY hbase-1.4.0-bin.tar.gz /usr/local/
+#Copy hbase
+COPY hbase-2.3.5-bin.tar.gz /usr/local/
 WORKDIR /usr/local/
-RUN tar -xf hbase-1.4.0-bin.tar.gz \
-    && rm hbase-1.4.0-bin.tar.gz \
-    && ln -s ./hbase-1.4.0 hbase
+RUN tar -xf hbase-2.3.5-bin.tar.gz \
+    && rm hbase-2.3.5-bin.tar.gz \
+    && ln -s ./hbase-2.3.5 hbase
 
 ENV PATH="/usr/local/hbase/bin:${PATH}"
 

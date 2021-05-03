@@ -8,5 +8,6 @@ cd /usr/local/hbase/bin/
 
 ./start-hbase.sh
 
-/bin/bash
+hbase thrift start -p 8081 --infoport 8082
 
+tail -f /dev/null
